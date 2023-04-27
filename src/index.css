@@ -10,8 +10,8 @@ body {
   @apply scroll-smooth antialiased;
 }
 
-/* * {
-  outline: 1px solid greenyellow;
+/* * { 
+  outline: 1px solid greenyellow; // DEBUG 
 } */
 
 .paginate {

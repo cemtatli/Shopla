@@ -35,7 +35,7 @@ const DetailItem = ({ productDetail }) => {
     <div className="container mx-auto my-10">
       <div className="flex flex-col gap-4 md:flex-row">
         <div className="md:w-1/2">
-          <div className="h-[350px] w-full overflow-hidden rounded-md border">
+          <div className="h-[350px] w-full overflow-hidden rounded-md">
             <img className="h-full w-full object-contain" src={productDetail?.image} alt={productDetail.title} />
           </div>
         </div>
@@ -48,19 +48,19 @@ const DetailItem = ({ productDetail }) => {
           <div className="mt-5 flex items-center">
             <button
               onClick={productSellHandle}
-              className="flex h-10 w-15 items-center justify-center bg-primary px-4 text-base font-medium text-white"
+              className="flex h-10 w-12 items-center justify-center bg-primary px-2 text-sm font-medium text-white md:px-4 md:text-base"
             >
               Çıkar
             </button>
             <input
               readOnly
               value={productCount}
-              className="flex h-10 w-15 items-center justify-center bg-white px-4 text-center text-base  font-medium text-primary outline-none"
+              className="flex h-10 w-12 items-center justify-center bg-white px-4 text-center text-base  font-medium text-primary outline-none"
             />
 
             <button
               onClick={productBuyHandle}
-              className="flex h-10 w-15 items-center justify-center bg-primary px-4 text-base font-medium text-white"
+              className="flex h-10 w-12 items-center justify-center  bg-primary px-2 text-sm font-medium text-white md:px-4 md:text-base"
             >
               Ekle
             </button>
