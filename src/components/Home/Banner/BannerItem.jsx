@@ -6,11 +6,10 @@ const BannerItem = ({ item, id }) => {
         <span className="line-clamp-2 w-3/4 text-start text-sm font-light text-gray-400">{item?.description}</span>
         <div className="flex w-3/4 items-center gap-x-6 text-start">
           <span className="line-clamp-2 text-start text-sm font-medium text-slate-800">
-            <div className=" text-primary"> {item?.rating?.count}</div> kez satın alındı.
+            <div className="text-primary"> {item?.rating?.count}</div> kez satın alındı.
           </span>
           <span className="line-clamp-2 text-start text-sm font-medium text-slate-800">
-            <div className=" text-primary"> {item?.rating?.rate}</div>
-            Değerlendirme
+            <div className="text-primary"> {item?.rating?.rate}</div> Değerlendirme
           </span>
         </div>
       </div>

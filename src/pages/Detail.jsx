@@ -14,7 +14,7 @@ const Detail = () => {
   useEffect(() => {
     dispatch(getDetailProduct(id));
   }, [dispatch, id]);
-  return <div>{productDetailStatus == "LOADING" ? <Loading /> : <DetailItem productDetail={productDetail} />}</div>;
+  return <>{productDetailStatus == "LOADING" ? <Loading /> : <DetailItem productDetail={productDetail} />}</>;
 };
 
 export default Detail;

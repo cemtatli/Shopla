@@ -12,7 +12,7 @@ const Home = () => {
     <div>
       <Banner />
       <Filter setSort={setSort} />
-      <div className="mt-2 flex border border-gray-200 border-opacity-50">
+      <div className="flex border border-gray-200 border-opacity-50">
         <Category setCategory={setCategory} />
         <Products category={category} sort={sort} />
       </div>

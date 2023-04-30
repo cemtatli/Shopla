@@ -15,7 +15,9 @@ const Basket = ({ cart }) => {
         {cart?.price} ₺ <span className="ml-1 text-base text-black">({cart?.productCount})</span>
       </div>
 
-      <button onClick={() => dispatch(removeFromCard(cart?.id))}>Sepetten Sil</button>
+      <BlButton variant="secondary" kind="info" size="medium">
+        <button onClick={() => dispatch(removeFromCard(cart?.id))}>Sepetten Sil</button>
+      </BlButton>
     </div>
   );
 };

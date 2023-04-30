@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Comment from "./Comment";
 import { useDispatch } from "react-redux";
 import { addToCard } from "~/redux/cardSlice";
+import { BlButton } from "@trendyol/baklava/dist/baklava-react";
 
 const DetailItem = ({ productDetail }) => {
   const dispatch = useDispatch();
@@ -46,30 +47,21 @@ const DetailItem = ({ productDetail }) => {
             <div className="text-3xl font-medium text-primary">{productDetail?.price} ₺</div>
           </div>
           <div className="mt-5 flex items-center">
-            <button
-              onClick={productSellHandle}
-              className="flex h-10 w-12 items-center justify-center bg-primary px-2 text-sm font-medium text-white md:px-4 md:text-base"
-            >
-              Çıkar
-            </button>
+            <BlButton variant="tertiary" size="medium">
+              <button onClick={productSellHandle}>Çıkar</button>
+            </BlButton>
             <input
               readOnly
               value={productCount}
               className="flex h-10 w-12 items-center justify-center bg-white px-4 text-center text-base  font-medium text-primary outline-none"
             />
 
-            <button
-              onClick={productBuyHandle}
-              className="flex h-10 w-12 items-center justify-center  bg-primary px-2 text-sm font-medium text-white md:px-4 md:text-base"
-            >
-              Ekle
-            </button>
-            <button
-              onClick={addBasketItem}
-              className="ml-auto flex h-10 items-center justify-center bg-primary px-4 text-base font-medium text-white"
-            >
-              Sepete Ekle
-            </button>
+            <BlButton variant="tertiary" size="medium">
+              <button onClick={productBuyHandle}>Ekle</button>
+            </BlButton>
+            <BlButton size="medium" className="ml-auto">
+              <button onClick={addBasketItem}>Sepete Ekle</button>
+            </BlButton>
           </div>
         </div>
       </div>
